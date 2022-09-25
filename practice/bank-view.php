@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
 
     <title>PHPiggy Bank</title>
@@ -16,5 +17,10 @@
         You have $<?php echo $total; ?> in your piggy bank.
     </p>
 
+    <p>
+        You have <?php echo $quarter; ?> quarters in your bank.
+    </p>
+
 </body>
+
 </html>
