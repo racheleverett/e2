@@ -10,9 +10,9 @@
 - Set 2 computer players
 - Distribute cell value X, O to each player
 - Each player can guess x, y values between 0, 2
-- After a player makes a guess, check ifthat spot is empty
-- If not the make another guess until a proper move has been made
-- loop through the moves until either all places are filled or a winning combination is made
+- After a player makes a guess, check if that spot is empty
+- If not then make another guess until a proper move has been made
+- Loop through the moves until either all places are filled or a winning combination is made
 - If win combination found, terminate
 
 ## Outside resources
