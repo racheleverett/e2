@@ -76,56 +76,56 @@
                 }
                 echo PHP_EOL . "\t";
             }
-            if ($cell_empty == 0) {
-                break;
-            }
 
             #check if it's a winning move
             if ($cell_empty <= 4) {
                 foreach ($matrix as $i => $row) {
                     if ($matrix[$i][0] == 'X' && $matrix[$i][1] == 'X' && $matrix[$i][2] == 'X') {
-                        echo '<strong>Player 1 wins';
+                        echo '<strong>Player 1 wins</strong>';
                         $winner_move = true;
                         break;
                     }
                     if ($matrix[0][$i] == 'X' && $matrix[1][$i] == 'X' && $matrix[2][$i] == 'X') {
-                        echo '<strong>Player 1 wins';
+                        echo '<strong>Player 1 wins</strong>';
                         $winner_move = true;
                         break;
                     }
                     if ($matrix[$i][0] == 'O' && $matrix[$i][1] == 'O' && $matrix[$i][2] == 'O') {
-                        echo '<strong>Player 2 wins';
+                        echo '<strong>Player 2 wins</strong>';
                         $winner_move = true;
                         break;
                     }
                     if ($matrix[0][$i] == 'O' && $matrix[1][$i] == 'O' && $matrix[2][$i] == 'O') {
-                        echo '<strong>Player 2 wins';
+                        echo '<strong>Player 2 wins</strong>';
                         $winner_move = true;
                         break;
                     }
                 }
                 if ($matrix[0][0] == 'X' && $matrix[1][1] == 'X' && $matrix[2][2] == 'X') {
-                    echo '<strong>Player 1 wins';
+                    echo '<strong>Player 1 wins</strong>';
                     $winner_move = true;
                     break;
                 }
                 if ($matrix[2][0] == 'X' && $matrix[1][1] == 'X' && $matrix[0][2] == 'X') {
-                    echo '<strong>Player 1 wins';
+                    echo '<strong>Player 1 wins</strong>';
                     $winner_move = true;
                     break;
                 }
                 if ($matrix[0][0] == 'O' && $matrix[1][1] == 'O' && $matrix[2][2] == 'O') {
-                    echo '<strong>Player 2 wins';
+                    echo '<strong>Player 2 wins</strong>';
                     $winner_move = true;
                     break;
                 }
                 if ($matrix[2][0] == 'O' && $matrix[1][1] == 'O' && $matrix[0][2] == 'O') {
-                    echo '<strong>Player 2 wins';
+                    echo '<strong>Player 2 wins</strong>';
                     $winner_move = true;
                     break;
                 }
             }
             if ($winner_move == true) {
+                break;
+            }
+            if ($cell_empty == 0) {
                 break;
             }
 
@@ -152,53 +152,53 @@
                 }
                 echo PHP_EOL . "\t";
             }
-            if ($cell_empty == 0) {
-                break;
-            }
 
             #check if it's a winning move
             if ($cell_empty <= 4) {
                 foreach ($matrix as $i => $row) {
                     if ($matrix[$i][0] == 'X' && $matrix[$i][1] == 'X' && $matrix[$i][2] == 'X') {
-                        echo '<strong>Player 1 wins';
+                        echo '<strong>Player 1 wins</strong>';
                         $winner_move = true;
                         break;
                     }
                     if ($matrix[0][$i] == 'X' && $matrix[1][$i] == 'X' && $matrix[2][$i] == 'X') {
-                        echo '<strong>Player 1 wins';
+                        echo '<strong>Player 1 wins</strong>';
                         $winner_move = true;
                         break;
                     }
                     if ($matrix[$i][0] == 'O' && $matrix[$i][1] == 'O' && $matrix[$i][2] == 'O') {
-                        echo '<strong>Player 2 wins';
+                        echo '<strong>Player 2 wins</strong>';
                         $winner_move = true;
                         break;
                     }
                     if ($matrix[0][$i] == 'O' && $matrix[1][$i] == 'O' && $matrix[2][$i] == 'O') {
-                        echo '<strong>Player 2 wins';
+                        echo '<strong>Player 2 wins</strong>';
                         $winner_move = true;
                         break;
                     }
                 }
                 if ($matrix[0][0] == 'X' && $matrix[1][1] == 'X' && $matrix[2][2] == 'X') {
-                    echo '<strong>Player 1 wins';
+                    echo '<strong>Player 1 wins</strong>';
                     $winner_move = true;
                     break;
                 } else if ($matrix[2][0] == 'X' && $matrix[1][1] == 'X' && $matrix[0][2] == 'X') {
-                    echo '<strong>Player 1 wins';
+                    echo '<strong>Player 1 wins</strong>';
                     $winner_move = true;
                     break;
                 } else if ($matrix[0][0] == 'O' && $matrix[1][1] == 'O' && $matrix[2][2] == 'O') {
-                    echo '<strong>Player 2 wins';
+                    echo '<strong>Player 2 wins</strong>';
                     $winner_move = true;
                     break;
                 } else if ($matrix[2][0] == 'O' && $matrix[1][1] == 'O' && $matrix[0][2] == 'O') {
-                    echo '<strong>Player 2 wins';
+                    echo '<strong>Player 2 wins</strong>';
                     $winner_move = true;
                     break;
                 }
             }
             if ($winner_move == true) {
+                break;
+            }
+            if ($cell_empty == 0) {
                 break;
             }
         }
