@@ -19,6 +19,6 @@
 
 ## Notes for instructor
 
-- Reason why login is not in controller is due to multiple moves from both players
+- Reason why logic is not in controller is due to multiple moves from both players
 - If I put logic in controller then we will only know who the winner is
 - which will eliminate all the fun of watching what's going on
