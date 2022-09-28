@@ -9,8 +9,7 @@
 </head>
 
 <body>
-    <h1>Project One</h1>
-    <h3>Tic Tac Toe</h3>
+    <h1>Tic Tac Toe Game Simulator</h1>
 
     <h2>Mechanics</h2>
     <ul>
@@ -31,8 +30,6 @@
         <li>If no winning move has been made, declare draw and continue</li>
         <li>If a winning move found, declare the winning side</li>
     </ul>
-    <hr>
-
     <pre>
         -----------------
         Game starts here
