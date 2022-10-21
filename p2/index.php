@@ -18,7 +18,9 @@ class Game
 
     public function __construct()
     {
-        $this->turn = 'C';
+        session_start();
+
+        $this->turn = 'C';  // first move
     }
 
     public function displayMatrix()
@@ -47,9 +49,28 @@ class Game
                 $this->matrix[$moveX][$moveY] = $this->computer;
 
                 $this->moves['C'][] = [$moveX, $moveY];
+
+                $_SESSION['matrix'] = $this->matrix;
+                $_SESSION['game_moves'] = $this->moves;
                 break;
             }
         }
+    }
+
+    public function humanMove()
+    {
+        $html = '<form method="POST" action="process_move.php">
+            <h1>Make your move</h1>
+
+            <label for="move_x">X:</label>
+            <input type="number" name="move_x" id="move_x" min="0" max="2" step="1">
+
+            <label for="move_y">Y:</label>
+            <input type="number" name="move_y" id="move_y" min="0" max="2" step="1">
+        
+            <button type="submit">Submit</button>
+        </form>';
+        echo $html;
     }
 
     public function isCellEmpty($x, $y)
@@ -66,11 +87,11 @@ echo $game->human . PHP_EOL;
 echo nl2br($game->displayMatrix()) . PHP_EOL;
 $game->computerMove();
 echo nl2br($game->displayMatrix()) . PHP_EOL;
-$game->computerMove();
-echo nl2br($game->displayMatrix()) . PHP_EOL;
-$game->computerMove();
-echo nl2br($game->displayMatrix()) . PHP_EOL;
-$game->computerMove();
-echo nl2br($game->displayMatrix()) . PHP_EOL;
+$game->humanMove();
+// echo nl2br($game->displayMatrix()) . PHP_EOL;
+// $game->computerMove();
+// echo nl2br($game->displayMatrix()) . PHP_EOL;
+// $game->computerMove();
+// echo nl2br($game->displayMatrix()) . PHP_EOL;
 
 echo '</pre>';
