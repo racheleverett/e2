@@ -45,7 +45,9 @@ class Game
     public function makeMove()
     {
         if ($this->turn == 'C') {
-            echo 'Player: Computer' . PHP_EOL;
+            echo '┌────────────────────┐' . PHP_EOL;
+            echo '│  Player: Computer  │' . PHP_EOL;
+            echo '└────────────────────┘' . PHP_EOL;
             $this->computerMove();
             return;
         } else {

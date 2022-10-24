@@ -27,7 +27,7 @@ require('Game.php');
         <li>Once user makes it's move, validate and submit</li>
         <li>If winning move then declare winner and terminate</li>
         <li>If not, check if matrix is full then announce draw and terminate</li>
-        <li>Otherwise go to to step 4</li>
+        <li>Otherwise go to step 4</li>
     </ol>
 
     <h2>Instructions</h2>
@@ -63,7 +63,7 @@ require('Game.php');
         # check if a winning move exists
         $game->isWinningMove();
         if ($game->winner_move) {
-            echo ($game->winner == 'X' ? 'Computer' : 'You') . ' won this round.' . PHP_EOL;
+            echo '<strong style="color: green;">' . ($game->winner == 'X' ? 'Computer' : 'You') . ' won this round.</strong>' . PHP_EOL;
             echo 'click <a href=".">here</a> to restart.';
             session_destroy();
             break;
@@ -77,9 +77,9 @@ require('Game.php');
             break;
         }
 
-        echo '> Turn: ' . $game->turn . PHP_EOL;
+        // echo '> Turn: ' . $game->turn . PHP_EOL;
         if (isset($_SESSION['error'])) {
-            echo '<span class="error">' . $_SESSION['error'] . '</span>' . PHP_EOL;
+            echo '<span style="color: red;">' . $_SESSION['error'] . '</span>' . PHP_EOL;
             echo nl2br($game->displayMatrix()) . PHP_EOL;
             unset($_SESSION['error']);
         }
