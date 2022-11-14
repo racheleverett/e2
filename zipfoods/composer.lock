@@ -1113,16 +1113,16 @@
         },
         {
             "name": "susanbuck/e2core",
-            "version": "0.1.18",
+            "version": "0.1.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/susanBuck/e2core.git",
-                "reference": "b367d097b22a3cafe785f3f6d3d0f73f78bbfad7"
+                "reference": "31e14b88671d5a7c315fd697b73e8d90deada865"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/susanBuck/e2core/zipball/b367d097b22a3cafe785f3f6d3d0f73f78bbfad7",
-                "reference": "b367d097b22a3cafe785f3f6d3d0f73f78bbfad7",
+                "url": "https://api.github.com/repos/susanBuck/e2core/zipball/31e14b88671d5a7c315fd697b73e8d90deada865",
+                "reference": "31e14b88671d5a7c315fd697b73e8d90deada865",
                 "shasum": ""
             },
             "require": {
@@ -1150,9 +1150,9 @@
             "description": "Practice framework for CSCI E-2",
             "support": {
                 "issues": "https://github.com/susanBuck/e2core/issues",
-                "source": "https://github.com/susanBuck/e2core/tree/0.1.18"
+                "source": "https://github.com/susanBuck/e2core/tree/0.1.19"
             },
-            "time": "2022-11-01T18:01:04+00:00"
+            "time": "2022-11-07T15:57:52+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
