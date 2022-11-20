@@ -9,6 +9,10 @@
         <div class="alert alert-success">Thank you, review submitted</div>
     @endif
 
+    @if ($app->errorsExist())
+        <div class="alert alert-danger">Please fix errors below</div>
+    @endif
+
     <div id='product-show'>
         <h2>{{ $product['name'] }}</h2>
 
@@ -26,12 +30,12 @@
         <input type='hidden' name='sku' value='{{ $product['sku'] }}'>
         <div class='form-group'>
             <label for='name'>Name</label>
-            <input type='text' class='form-control' name='name' id='name'>
+            <input type='text' class='form-control' name='name' id='name' value="{{ $app->old('name') }}">
         </div>
 
         <div class='form-group'>
             <label for='review'>Review</label>
-            <textarea name='review' id='review' class='form-control'></textarea>
+            <textarea name='review' id='review' class='form-control'>{{ $app->old('review') }}</textarea>
             <small>Min 200 characters</small>
         </div>
 
