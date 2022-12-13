@@ -33,7 +33,13 @@ class ProductsController extends Controller
         }
         $product = $product[0];
         $reviewSaved = $this->app->old('reviewSaved');
-        return $this->app->view('products/show', ['product' => $product, 'reviewSaved' => $reviewSaved]);
+
+        $reviews = $this->app->db()->findByColumn('reviews', 'product_id', '=', $product['id']);
+        return $this->app->view('products/show', [
+            'product' => $product,
+            'reviews' => $reviews,
+            'reviewSaved' => $reviewSaved
+        ]);
     }
 
     public function saveReview()
